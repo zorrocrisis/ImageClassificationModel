@@ -88,27 +88,19 @@ More specifically, this new model functioned with **stochastic gradient descent 
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/82650516-92aa-45eb-af48-db7edfa85d5d"/>
+  <img src="https://github.com/user-attachments/assets/400bccf5-5dc6-4f07-b6e4-3d0ff28711d0"/>
 </p>
 
-
-
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a3dd2bf8-dbb6-4547-89bc-b8faee78516b"/>
-  <img src="https://github.com/user-attachments/assets/5dd86603-f221-49f4-8670-c9bcd2883983"/>
-  <img src="https://github.com/user-attachments/assets/96650339-d148-419c-a351-4d80749a3db7"/>
+  <img width= 500 src="https://github.com/user-attachments/assets/a3dd2bf8-dbb6-4547-89bc-b8faee78516b"/>
+  <img width= 500 src="https://github.com/user-attachments/assets/5dd86603-f221-49f4-8670-c9bcd2883983"/>
+  <img width= 500 src="https://github.com/user-attachments/assets/96650339-d148-419c-a351-4d80749a3db7"/>
 </p>
 
 <p align="center">
   <i>Graph Set 1 -The resulting validation accuracies with increasing learning rates: 0.001, 0.01 and 0.1</i>
 </p>
 
-![validation_accuracy_0 001](https://github.com/user-attachments/assets/a3dd2bf8-dbb6-4547-89bc-b8faee78516b)
-
-Graph Set 1 - From left to right, top to bottom we have the resulting validation accuracies with
-increasing learning rates: 0.001, 0.01 and 0.1
-
-![imagem](https://github.com/user-attachments/assets/82650516-92aa-45eb-af48-db7edfa85d5d)
 
 
 From a brief analysis of the plotted data, we could report **the best configuration corresponded to the logistic regression classifier with a learning rate of 0.00**: not only does it have the best accuracies and final test loss, it seems to learn in a more consistent manner - the respective graphs have less sudden variations than the models with bigger learning rates. This can mean that bigger learning rates make the model “jump over” potential minima, thus explaining higher accuracies followed by considerable drops and an inconsistent evolution of these values.
