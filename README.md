@@ -12,23 +12,22 @@ This project, originally an evaluation component for the Deep Learning course (2
 The following document indicates how to access and utilise the source code. It also contains a brief analysis of the implementation and results.
 
 ## **Quick Start**
-
-In order to complete this exercise, you will need to download the Kuzushiji-MNIST dataset.
-You can do this by running the following command in the homework directory:
-python download_kuzushiji_mnist.py.
-
 This project's source files can be downloaded from this repository. They are divided into the following main files:
-- ***hw1-q1*** - 
-- ***hw1-q2*** -
+- ***hw1-q1*** - contains a Perceptron, a logistic regression and a multi-layer Perceptron classifiers, all grounded on "manual" implementations of differentiation.
+- ***hw1-q2*** - contains a logistic regression and feed-forward neural network classifiers, both grounded on automatic differentiation.
 
 To run this poject, follow these steps:
 1. Install the necessary dependencies:
-     - pip install pandas
-     - pip install nltk
-     - pip install scikit-learn
+     - pip install torch
+     - pip install matplotlib
   
-2. Simply run whatever file you would like utilising a terminal. As an example:
+2. Download the Kuzushiji-MNIST dataset:
+     - python download_kuzushiji_mnist.py
+  
+3. Simply run whatever file you would like utilising a terminal. Bare in mind some models accept input parameters. Examples:
      - python hw1-q1.py logistic_regression
+     - python hw1-q2.py ffn -layers 1 -hidden_sizes 200
+     - python hw1-q2.py -layers 2 -hidden_sizes 200 -learning_rate 0.1
   
 Feel free to change the test and training sets, as well as any other parameters you see fit.
 
@@ -118,7 +117,7 @@ More specifically, this new model functioned with **stochastic gradient descent 
 From a brief analysis of the plotted data, we could report **the best configuration corresponded to the logistic regression classifier with a learning rate of 0.00**: not only does it have the best accuracies and final test loss, it seems to learn in a more consistent manner - the respective graphs have less sudden variations than the models with bigger learning rates. This can mean that bigger learning rates make the model “jump over” potential minima, thus explaining higher accuracies followed by considerable drops and an inconsistent evolution of these values.
 
 ## **Feed-Forward Neural Network with Single Hidden Layer (Autodiff Toolkit)**
-Finally, multiple **feed-forward neural networks with single hidden layer** were implemented (*python hw1-q2.py ????*), once again employing Pytorch for **automatic differentiation**.
+Finally, multiple **feed-forward neural networks with single hidden layer** were implemented (*python hw1-q2.py ffn -layers 1*), once again employing Pytorch for **automatic differentiation**.
 
 More specifically, **six single-layer neural networks** were developed and tested:
 - **Default NN** - default hyperparameters from Table 1;
@@ -151,7 +150,7 @@ However, it was also the NN which **took the longest to compute the 20 training 
 </p>
 
 ## **Feed-Forward Neural Network with Multiple Hidden Layers (Autodiff Toolkit)**
-Maintaining the hyperparameters for the best previous NN configuration, **the number of hidden layers was increased to 2 and 3** in order to verify how the accuracies evolved and what the new best configuration was. In other words, new tests were executed with **feed-forward neural networks with 2 and 3 hidden layers** (*python hw1-q2.py ????*), once again employing Pytorch for **automatic differentiation**.
+Maintaining the hyperparameters for the best previous NN configuration, **the number of hidden layers was increased to 2 and 3** in order to verify how the accuracies evolved and what the new best configuration was. In other words, new tests were executed with **feed-forward neural networks with 2 and 3 hidden layers** (*python hw1-q2.py ffn -layers 2* and *python hw1-q2.py ffn -layers 3*), once again employing Pytorch for **automatic differentiation**.
 
 The results can be analysed below:
 
