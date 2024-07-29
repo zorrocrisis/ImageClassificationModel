@@ -78,8 +78,8 @@ These outcomes are quite remarkable, especially taking into account the previous
 However, **one must also consider the computational performance of this version of the Perceptron** - whereas the other models took a few minutes to train, **the multi-layer Perceptron does require a longer learning time** (around 20 minutes, in the same computer as the other tests), which might not be ideal for every application.
 
 
-## **Autodiff Toolkit**
-In the previous models, the gradient backpropagation algorithm had been written by hand. That being said, a new system logisitc regrission classifier was developed (*python hw1-q2.py logistic_regression*), this time **employing a deep learning framework with automatic differentiation**, namely Pytorch.
+## **Logistic Regression with Autodiff Toolkit**
+In the previous models, the gradient backpropagation algorithm had been written by hand. That being said, a new system **logistic regression classifier** was developed (*python hw1-q2.py logistic_regression*), this time **employing a deep learning framework with automatic differentiation**, namely Pytorch.
 
 More specifically, this new model functioned with **stochastic gradient descent with a batch size of 1** and with a **training duration of 20 epochs**, producing the following results for distinct values of learning rates:
 
@@ -98,42 +98,86 @@ More specifically, this new model functioned with **stochastic gradient descent 
 </p>
 
 <p align="center">
-  <i>Graph Set 1 -The resulting validation accuracies with increasing learning rates: 0.001, 0.01 and 0.1</i>
+  <i>Graph Set 1 - The resulting validation accuracies with increasing learning rates: 0.001, 0.01 and 0.1</i>
 </p>
 
 
 
+<p align="center">
+  <img width= 500 src="https://github.com/user-attachments/assets/538962c2-b947-4e28-98c1-23d8e09d2042"/>
+  <img width= 500 src="[https://github.com/user-attachments/assets/356f27ea-140c-4864-961a-9809bbd3f256"/>
+  <img width= 500 src="https://github.com/user-attachments/assets/b68f4dbb-03af-40bc-926a-9363a0eb9f16"/>
+</p>
+
+<p align="center">
+  <i>Graph Set 2 - The resulting training loss with increasing learning rates: 0.001, 0.01 and 0.1</i>
+</p>
+
 From a brief analysis of the plotted data, we could report **the best configuration corresponded to the logistic regression classifier with a learning rate of 0.00**: not only does it have the best accuracies and final test loss, it seems to learn in a more consistent manner - the respective graphs have less sudden variations than the models with bigger learning rates. This can mean that bigger learning rates make the model “jump over” potential minima, thus explaining higher accuracies followed by considerable drops and an inconsistent evolution of these values.
 
+## **Feed-Forward Neural Network with Single Hidden Layer (Autodiff Toolkit)**
+Finally, multiple **feed-forward neural networks with single hidden layer** were implemented (*python hw1-q2.py ????*), once again employing Pytorch for **automatic differentiation**.
 
+More specifically, **six single-layer neural networks** were developed and tested:
+- **Default NN** - default hyperparameters from Table 1;
+- **LR 0.001 NN** - learning rate of 0.001 and the remainder of the hyperparameters are default;
+- **LR 0.1 NN** - learning rate of 0.1 and the remainder of the hyperparameters are default;
+- **Hidden Size 200 NN** - hidden layer of 200 neurons and the remainder of the hyperparameters are default;
+- **Dropout 0.5 NN** - dropout probability of 0.5 and the remainder of the hyperparameters are default;
+- **Activation tanh NN** - activation function is tanh and the remainder of the hyperparameters are default;
 
-3. (15 points) Implement a feed-forward neural network with a single layer, using dropout
-regularization. Make sure to include all the hyperparameters and training/model design
-choices shown in Table 1. Use the values presented in the table as default. Tune each of
-these hyperparameters while leaving the remaining at their default value:
-• The learning rate: {0:001; 0:01; 0:1}.
-Page 2• The hidden size: {100; 200}.
-• The dropout probability: {0:3; 0:5}.
-• The activation function: relu and tanh.
-Number of Epochs 20
-Learning Rate 0.01
-Hidden Size 100
-Dropout 0.3
-Batch Size 16
-Activation ReLU
-Optimizer SGD
-Table 1: Default hyperparameters.
-Report your best configuration, make similar plots as in the previous question, and report
-the final test accuracy.
-In the skeleton code, you will need to implement the class FeedforwardNetwork’s __init__()
-and forward() methods.
-4. (10 points) Using the same hyperparameters as in Table 1, increase the model to 2 and 3
-layers. Report your best configuration, make similar plots as in the previous question, and
-report the final test accuracy. (Note: in the real world, you would need to do hyperparameter
-tuning for the different network architectures, but this is not required for this assignment.)
+The results from varying these hyperparameters are indicated below:
 
+<p align="center">
+  <i>Table 2 - Comparison of results from tuning of hyperparameters of single layer NNs</i>
+</p>
 
-## **Implementations**
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/85c3a79c-6f8b-40f2-aeaa-a70bf592e828"/>
+</p>
+
+The NN with an **increased hidden layer size** (and the remainder of the hyperparameters with default values) had the best performance in terms of both validation and final test accuracy, thus representing the **best configuration**.
+
+However, it was also the NN which **took the longest to compute the 20 training epochs**, which is quite understandable: an increase in the amount of neurons directly affects the network’s speed. Despite this, the time increase was not significant for such a small and simple network like this one - perhaps with multiple hidden layers the results would differ in this aspect…
+
+<p align="center">
+  <i>Table 3 - Best single layer feedforward neural network configuration (from the tests above)</i>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d17274ed-19bf-4c06-b043-8a6152e3d3c4"/>
+</p>
+
+## **Feed-Forward Neural Network with Multiple Hidden Layers (Autodiff Toolkit)**
+Maintaining the hyperparameters for the best previous NN configuration, **the number of hidden layers was increased to 2 and 3** in order to verify how the accuracies evolved and what the new best configuration was. In other words, new tests were executed with **feed-forward neural networks with 2 and 3 hidden layers** (*python hw1-q2.py ????*), once again employing Pytorch for **automatic differentiation**.
+
+The results can be analysed below:
+
+<p align="center">
+  <i>Table 4 - Comparison between best previous model, one additional hidden layer and two additional hidden layers</i>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/410ef20e-510c-4a6a-91e0-778bd7e39e98"/>
+</p>
+
+Unlike the results from the previous models, a not so direct conclusion is encountered: **although adding multiple hidden layers increases the overall accuracy of the NN, there is a point where it is superfluous and even less efficient, in terms of performance, to continue to increase the complexity of the network for such a simple task**.
+
+For instance, in Table 4, the increase of the final test accuracy goes from 1.45% (between the single layer NN and the two layer NN) to actually decreasing 0.56% (between the two layer and three layer NN) - this might be due to a small numerical fluctuation but, either way, it is a sign of the **accuracy beginning to stabilise**.
+
+The same goes for the validation accuracy: although there is an overall increase with the number of layers in the network, the increase percentage becomes almost insignificant, going from 0.61% to 0.05%.
+
+Considering the first row of Table 4, which showcases a **constant increase in time taken to compute the 20 training epochs** (around 22 seconds for each layer added), we can state **the advantages of gaining a third layer are not worth the computational impact the program induces**. Therefore, the best configuration corresponds to the second column of the table, which translates in
+the following set of hyperparameters:
+
+<p align="center">
+  <i>Table 5 - Best multi-layer feedforward neural network configuration (from the tests above)</i>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e29ba54b-e68d-4a24-b45c-a06ec3651dd7"/>
+</p>
+
 
 ## **Authors and Acknowledgements**
 This project was developed by **[Miguel Belbute (zorrocrisis)](https://github.com/zorrocrisis)** and [Guilherme Pereira](https://github.com/the-Kob).
