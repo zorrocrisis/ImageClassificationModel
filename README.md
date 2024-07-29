@@ -6,7 +6,7 @@ This project, originally an evaluation component for the Deep Learning course (2
 </p>
 
 <p align="center">
-  <i>Figure 1 - Images from the Kuzushiji-MNIST dataset.</i>
+  <i>Figure 1 - Images from the Kuzushiji-MNIST dataset</i>
 </p>
 
 The following document indicates how to access and utilise the source code. It also contains a brief analysis of the implementation and results.
