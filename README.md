@@ -22,7 +22,7 @@ To run this poject, follow these steps:
      - pip install matplotlib
   
 2. Download the Kuzushiji-MNIST dataset:
-  - python download_kuzushiji_mnist.py
+     - python download_kuzushiji_mnist.py
   
 3. Simply run whatever file you would like utilising a terminal. Bare in mind some models accept input parameters. Examples:
      - python hw1-q1.py logistic_regression
