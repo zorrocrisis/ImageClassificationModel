@@ -105,7 +105,7 @@ More specifically, this new model functioned with **stochastic gradient descent 
 
 <p align="center">
   <img width= 500 src="https://github.com/user-attachments/assets/538962c2-b947-4e28-98c1-23d8e09d2042"/>
-  <img width= 500 src="[https://github.com/user-attachments/assets/356f27ea-140c-4864-961a-9809bbd3f256"/>
+  <img width= 500 src="https://github.com/user-attachments/assets/356f27ea-140c-4864-961a-9809bbd3f256"/>
   <img width= 500 src="https://github.com/user-attachments/assets/b68f4dbb-03af-40bc-926a-9363a0eb9f16"/>
 </p>
 
