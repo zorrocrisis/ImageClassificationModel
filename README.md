@@ -5,6 +5,10 @@ This project, originally an evaluation component for the Deep Learning course (2
   <img src="https://github.com/user-attachments/assets/598e0554-0dff-4928-82bc-ea1ffdb41e92"/>
 </p>
 
+<p align="center">
+  <i>Figure 1 - Images from the Kuzushiji-MNIST dataset.</i>
+</p>
+
 The following document indicates how to access and utilise the source code. It also contains a brief analysis of the implementation and results.
 
 ## **Quick Start**
@@ -14,10 +18,8 @@ You can do this by running the following command in the homework directory:
 python download_kuzushiji_mnist.py.
 
 This project's source files can be downloaded from this repository. They are divided into the following main files:
-- ***reviews.py*** - contains the best final classification model, training it on the training set (*train.txt*) to classify the test set (*test_just_reviews.txt*) and producing a list of labels/classifications (*results.txt*).
-- ***train_multiple_models.py*** - trains and tests the implemented machine learning classification models.
-- ***fine_tuning.py*** - fine-tunes the machine learning classification models.
-- ***bert.py*** and ***tcn_models.py*** - contains the deep learning classification models.
+- ***hw1-q1*** - 
+- ***hw1-q2*** -
 
 To run this poject, follow these steps:
 1. Install the necessary dependencies:
@@ -26,7 +28,7 @@ To run this poject, follow these steps:
      - pip install scikit-learn
   
 2. Simply run whatever file you would like utilising a terminal. As an example:
-     - python reviews.py
+     - python hw1-q1.py logistic_regression
   
 Feel free to change the test and training sets, as well as any other parameters you see fit.
 
