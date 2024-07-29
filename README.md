@@ -32,4 +32,4 @@ Feel free to change the test and training sets, as well as any other parameters 
 ## **Authors and Acknowledgements**
 This project was developed by **[Miguel Belbute (zorrocrisis)](https://github.com/zorrocrisis)** and [Guilherme Pereira](https://github.com/the-Kob).
 
-The skeleton code was supplied by [Francisco Melo](fmelo@inesc-id.pt).
+The skeleton code was supplied by Francisco Melo (fmelo@inesc-id.pt).
