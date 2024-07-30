@@ -227,16 +227,18 @@ The model was trained for 20 epochs using Adam, modifying only the learning rate
   <i>Graph Set 5 - CNNs validation accuracy and training loss with a learning rate of 0.00001</i>
 </p>
 
-The **learning rate with the best configuration was 0.0005**, with a final validation accuracy higher than 0.985 and a training loss lower than 0.05, results which are greater HELP
+The **CNN with the best configuration corresponds to a learning rate of 0.0005**, with a final validation accuracy higher than 0.985 and a training loss lower than 0.05. **The achieved results surpass the ones obtained with a feed-forward neural network** (Table 4).
 
-5. (3 points) Plot the activation maps of the first convolutional layer and the original training
-example. From the comparison of the activation maps and the original image, what appears
-to be highlighted in the activation maps?
-NOTE: the skeleton code already performs the extraction of the activation maps (saved as
-activation_maps.pdf) and the original image (saved as original_example.pdf). No coding
-is required
+The obtained activation maps of the convolutional layer highlight the silhouettes/features of the character present in the original image, with an emphasis on the yellow regions - Graph Set 6.
 
-Maintaining the hyperparameters for the best previous NN configuration, **the number of hidden layers was increased to 2 and 3** in order to verify how the accuracies evolved and what the new best configuration was. In other words, new tests were executed with **feed-forward neural networks with 2 and 3 hidden layers** (*python hw1-q2.py ffn -layers 2* and *python hw1-q2.py ffn -layers 3*), once again employing Pytorch for **automatic differentiation**.
+<p align="center">
+  <img width= 500 src="https://github.com/user-attachments/assets/0f9d6b7d-2c94-4614-9042-e7f45d64b56b"/>
+  <img width= 500 src="https://github.com/user-attachments/assets/9c175302-b31b-491f-92cd-b8aa66aa7614"/>
+</p>!
+
+<p align="center">
+  <i>Graph Set 6 - Original training example and CNN's activation maps of the first convolutional layer</i>
+</p>
 
 ## **Authors and Acknowledgements**
 This project was developed by **[Miguel Belbute (zorrocrisis)](https://github.com/zorrocrisis)** and [Guilherme Pereira](https://github.com/the-Kob).
