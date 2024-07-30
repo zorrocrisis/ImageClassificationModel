@@ -234,8 +234,8 @@ The **CNN with the best configuration corresponds to a learning rate of 0.0005**
 The obtained activation maps of the convolutional layer highlight the silhouettes/features of the character present in the original image, with an emphasis on the yellow regions - Graph Set 6.
 
 <p align="center">
-  <img width= 500 src="https://github.com/user-attachments/assets/0f9d6b7d-2c94-4614-9042-e7f45d64b56b"/>
-  <img width= 500 src="https://github.com/user-attachments/assets/9c175302-b31b-491f-92cd-b8aa66aa7614"/>
+  <img width= 500 src="https://github.com/user-attachments/assets/929e119b-8175-4d4a-bf33-0ef368d75afb"/>
+  <img width= 500 src="://github.com/user-attachments/assets/9c7aab16-7c09-4a40-a988-7315e750a84f"/>
 </p>
 
 <p align="center">
