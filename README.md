@@ -235,7 +235,7 @@ The obtained activation maps of the convolutional layer highlight the silhouette
 
 <p align="center">
   <img width= 500 src="https://github.com/user-attachments/assets/929e119b-8175-4d4a-bf33-0ef368d75afb"/>
-  <img width= 500 src="://github.com/user-attachments/assets/9c7aab16-7c09-4a40-a988-7315e750a84f"/>
+  <img width= 500 src="https://github.com/user-attachments/assets/9c7aab16-7c09-4a40-a988-7315e750a84f"/>
 </p>
 
 <p align="center">
