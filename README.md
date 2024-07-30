@@ -20,6 +20,7 @@ To run this poject, follow these steps:
 1. Install the necessary dependencies:
      - pip install torch
      - pip install matplotlib
+     - pip install torchvision
   
 2. Download the Kuzushiji-MNIST dataset:
      - python download_kuzushiji_mnist.py
