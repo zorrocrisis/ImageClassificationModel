@@ -15,7 +15,7 @@ The following document indicates how to access and utilise the source code. It a
 This project's source files can be downloaded from this repository. They are divided into the following main files:
 - ***hw1-q1*** - contains a Perceptron, a logistic regression and a multi-layer Perceptron classifiers, all grounded on "manual" implementations of differentiation.
 - ***hw1-q2*** - contains a logistic regression and feed-forward neural network classifiers, both grounded on automatic differentiation.
-- ***hw2-q1*** - contains a convolutional neural network classifier, grounded on automatic differentiation.
+- ***hw2-q2*** - contains a convolutional neural network classifier, grounded on automatic differentiation.
 
 To run this poject, follow these steps:
 1. Install the necessary dependencies:
