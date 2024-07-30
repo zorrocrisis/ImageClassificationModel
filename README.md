@@ -79,7 +79,7 @@ These outcomes are quite remarkable, especially taking into account the previous
 However, **one must also consider the computational performance of this version of the Perceptron** - whereas the other models took a few minutes to train, **the multi-layer Perceptron does require a longer learning time** (around 20 minutes, in the same computer as the other tests), which might not be ideal for every application.
 
 
-## **Logistic Regression with Autodiff Toolkit**
+## **Logistic Regression (Autodiff Toolkit)**
 In the previous models, the gradient backpropagation algorithm had been written by hand. That being said, a new system **logistic regression classifier** was developed (*python hw1-q2.py logistic_regression*), this time **employing a deep learning framework with automatic differentiation**, namely Pytorch.
 
 More specifically, this new model functioned with **stochastic gradient descent with a batch size of 1** and with a **training duration of 20 epochs**, producing the following results for distinct values of learning rates:
@@ -168,8 +168,7 @@ For instance, in Table 4, the increase of the final test accuracy goes from 1.45
 
 The same goes for the validation accuracy: although there is an overall increase with the number of layers in the network, the increase percentage becomes almost insignificant, going from 0.61% to 0.05%.
 
-Considering the first row of Table 4, which showcases a **constant increase in time taken to compute the 20 training epochs** (around 22 seconds for each layer added), we can state **the advantages of gaining a third layer are not worth the computational impact the program induces**. Therefore, the best configuration corresponds to the second column of the table, which translates in
-the following set of hyperparameters:
+Considering the first row of Table 4, which showcases a **constant increase in time taken to compute the 20 training epochs** (around 22 seconds for each layer added), we can state **the advantages of gaining a third layer are not worth the computational impact the program induces**. Therefore, the best configuration corresponds to the second column of the table, which translates to the following set of hyperparameters:
 
 <p align="center">
   <i>Table 5 - Best multi-layer feedforward neural network configuration (from the tests above)</i>
@@ -179,6 +178,65 @@ the following set of hyperparameters:
   <img src="https://github.com/user-attachments/assets/e29ba54b-e68d-4a24-b45c-a06ec3651dd7"/>
 </p>
 
+## **Convolutional Neural Network (Autodiff Toolkit)**
+A **convolutional neural network** (CNN) has **fewer free parameters than a fully-connected network with equal input size and number of classes** - its parameters are reused (tied/shared) as the kernel in a convolutional layer shifts across the input. Even more, CNNs **achieve a better generalisation** on images and patterns that represent letters and numbers, in comparsion to a fully-connected network - the latter does not acknowledge any order in its inputs (since they are laid out in a single vector), whereas **CNNs take advantage of the local spatial coherence** present in images and patterns.
+
+Considering these advantages, a convolutional neural network with the following **characteristics** was implemented (*python*):
+
+- A convolution layer with 8 output channels, a 5x5 kernel, stride of 1, and padding chosen to preserve the original image size.
+- A rectified linear unit activation function.
+- A max pooling with kernel size 2x2 and stride of 2.
+- A convolution layer with 16 output channels, a kernel of size 3x3, stride of 1, and padding of zero.
+- A rectified linear unit activation function.
+- A max pooling with kernel size 2x2 and stride of 2.
+- An affine transformation with 600 output features 
+- A rectified linear unit activation function.
+- A dropout layer with a dropout probability of 0.3.
+- An affine transformation with 120 output features.
+- A rectified linear unit activation function.
+- An affine transformation with the number of classes followed by an output LogSoftmax layer.
+
+The model was trained for 20 epochs using Adam, modifying only the learning rate with the following values: 0.00001, 0.0005, 0.01.
+
+<p align="center">
+  <img width= 500 src="https://github.com/user-attachments/assets/1094d3e3-3041-4508-a218-c2d1b9e33958"/>
+  <img width= 500 src="https://github.com/user-attachments/assets/e7395021-4816-45db-9c06-4b6e79633993"/>
+</p>
+
+<p align="center">
+  <i>Graph Set 3 - CNNs validation accuracy and training loss with a learning rate of 0.01</i>
+</p>
+
+
+<p align="center">
+  <img width= 500 src="https://github.com/user-attachments/assets/820b490c-b1eb-49d2-af63-30695cd9c977"/>
+  <img width= 500 src="https://github.com/user-attachments/assets/9c771cf4-43a0-4bcb-9a3d-24f1ce8119dd"/>
+</p>
+
+<p align="center">
+  <i>Graph Set 4 - CNNs validation accuracy and training loss with a learning rate of 0.0005</i>
+</p>
+
+
+<p align="center">
+  <img width= 500 src="https://github.com/user-attachments/assets/9e32f879-f972-47b6-b208-0ed103481ead"/>
+  <img width= 500 src="https://github.com/user-attachments/assets/7ef7d1e5-f98a-4ba7-a8e4-5bfbe4713e63"/>
+</p>
+
+<p align="center">
+  <i>Graph Set 5 - CNNs validation accuracy and training loss with a learning rate of 0.00001</i>
+</p>
+
+The **learning rate with the best configuration was 0.0005**, with a final validation accuracy higher than 0.985 and a training loss lower than 0.05, results which are greater HELP
+
+5. (3 points) Plot the activation maps of the first convolutional layer and the original training
+example. From the comparison of the activation maps and the original image, what appears
+to be highlighted in the activation maps?
+NOTE: the skeleton code already performs the extraction of the activation maps (saved as
+activation_maps.pdf) and the original image (saved as original_example.pdf). No coding
+is required
+
+Maintaining the hyperparameters for the best previous NN configuration, **the number of hidden layers was increased to 2 and 3** in order to verify how the accuracies evolved and what the new best configuration was. In other words, new tests were executed with **feed-forward neural networks with 2 and 3 hidden layers** (*python hw1-q2.py ffn -layers 2* and *python hw1-q2.py ffn -layers 3*), once again employing Pytorch for **automatic differentiation**.
 
 ## **Authors and Acknowledgements**
 This project was developed by **[Miguel Belbute (zorrocrisis)](https://github.com/zorrocrisis)** and [Guilherme Pereira](https://github.com/the-Kob).
