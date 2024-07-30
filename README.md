@@ -181,7 +181,7 @@ Considering the first row of Table 4, which showcases a **constant increase in t
 ## **Convolutional Neural Network (Autodiff Toolkit)**
 A **convolutional neural network** (CNN) has **fewer free parameters than a fully-connected network with equal input size and number of classes** - its parameters are reused (tied/shared) as the kernel in a convolutional layer shifts across the input. Even more, CNNs **achieve a better generalisation** on images and patterns that represent letters and numbers, in comparsion to a fully-connected network - the latter does not acknowledge any order in its inputs (since they are laid out in a single vector), whereas **CNNs take advantage of the local spatial coherence** present in images and patterns.
 
-Considering these advantages, a convolutional neural network with the following **characteristics** was implemented (*python*):
+Considering these advantages, a convolutional neural network with the following **characteristics** was implemented (*python hw2-q2.py*):
 
 - A convolution layer with 8 output channels, a 5x5 kernel, stride of 1, and padding chosen to preserve the original image size.
 - A rectified linear unit activation function.
@@ -234,7 +234,7 @@ The obtained activation maps of the convolutional layer highlight the silhouette
 <p align="center">
   <img width= 500 src="https://github.com/user-attachments/assets/0f9d6b7d-2c94-4614-9042-e7f45d64b56b"/>
   <img width= 500 src="https://github.com/user-attachments/assets/9c175302-b31b-491f-92cd-b8aa66aa7614"/>
-</p>!
+</p>
 
 <p align="center">
   <i>Graph Set 6 - Original training example and CNN's activation maps of the first convolutional layer</i>
