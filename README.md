@@ -1,4 +1,4 @@
-## **Image Classification Model**
+## **Image Classification Models**
 This project, originally an evaluation component for the Deep Learning course (2022/2023), talking place in Instituto Superior Técnico, University of Lisbon, aimed to **implement a linear classifier for a simple image classification problem**. More specifically, this poject utilises the KuzushijiMNIST dataset (KMNIST dataset), which contains handwritten cursive images of 10 characters from the Hiragana writing system (used for Japanese). Examples of images in this dataset are shown below.
 
 <p align="center">
