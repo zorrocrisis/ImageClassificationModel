@@ -19,6 +19,7 @@ This project's source files can be downloaded from this repository. They are div
 To run this poject, follow these steps:
 1. Install the necessary dependencies:
      - pip install torch
+     - pip install scikit-learn
      - pip install matplotlib
      - pip install torchvision
   
